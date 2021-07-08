@@ -1,20 +1,20 @@
+from typing import ValuesView
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from main import views
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('index.html/', views.ind, name='index'),
-    path('blog.html/', views.blog, name='index'),
-    path('cart.html/', views.cart, name='index'),
-    path('category.html', views.cat, name='category'),
-    path('checkout.html/', views.check, name='index'),
-    path('confirmation.html/', views.conf, name='index'),
-    path('contact.html/', views.con, name='contact'),
-    path('elements.html/', views.ele, name='index'),
-    path('login.html/', views.log, name='index'),
-    path('single-blog.html/', views.sib, name='single-blog'),
-    path('single-product.html/', views.sip, name='index'),
-    path('tracking.html/', views.track, name='index'),
+    path('', views.main, name='home'),
+    path('shop-category/', views.shopCategory, name='shop-category'),
+    path('product-details/', views.productDetails, name='product-details'),
+    path('product-checkout/', views.productCheckout, name='product-checkout'),
+    path('shopping-cart/', views.shopingCart, name='shopping-cart'),
+    path('confirmation/', views.confirmation, name='confirmation'),
+    path('blog/', views.blog, name='blog'),
+    path('blog-details/', views.blogDetails, name='blog-details'),
+    path('login/', views.login, name='login'),
+    path('tracking/', views.tracking, name='tracking'),
+    path('elements/', views.elements, name='elements'),
+    path('contact/', views.contact, name='contact'),
 ]

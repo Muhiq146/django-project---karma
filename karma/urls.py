@@ -20,16 +20,4 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('index.html/', include('main.urls')),
-    path('blog.html/', include('main.urls')),
-    path('cart.html/', include('main.urls')),
-    path('category.html/', include('main.urls')),
-    path('checkout.html/', include('main.urls')),
-    path('confirmation.html/', include('main.urls')),
-    path('contact.html/', include('main.urls')),
-    path('elements.html/', include('main.urls')),
-    path('login.html/', include('main.urls')),
-    path('single-blog.html/', include('main.urls')),
-    path('single-product.html/', include('main.urls')),
-    path('tracking.html/', include('main.urls')),
 ]
