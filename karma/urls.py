@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 
+admin.site.site_header = "Karma Admin Login"
+admin.site.site_title = "Karma Admin Portal"
+admin.site.index_title = "Welcome to Karma admin portal"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),

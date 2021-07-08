@@ -34,7 +34,7 @@ def blogDetails(request):
     return render(request, 'single-blog.html')
 
 
-def login(request):
+def loginUser(request):
     return render(request, 'login.html')
 
 
