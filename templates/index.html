@@ -6,7 +6,7 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
+	<link rel="shortcut icon" href="{% static 'img/fav.png' %}">
 	<!-- Author Meta -->
 	<meta name="author" content="CodePixar">
 	<!-- Meta Description -->
@@ -20,17 +20,18 @@
 	<!--
 		CSS
 		============================================= -->
-	<link rel="stylesheet" href="{% static 'css/linearicons.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/font-awesome.min.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/themify-icons.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/bootstrap.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/owl.carousel.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/nice-select.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/nouislider.min.c' %}ss">
+	<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/ion.rangeSlider.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/ion.rangeSlider.skinFlat.css' %}" />
-	<link rel="stylesheet" href="{% static 'css/magnific-popup.c' %}ss">
-	<link rel="stylesheet" href="{% static 'css/main.c' %}ss">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	
 </head>
 
 <body>
@@ -81,6 +82,14 @@
 								</ul>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false"><i class="fas fa-user"></i></a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+									<li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
+								</ul>
+							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -104,7 +113,7 @@
 	</header>
 	<!-- End Header Area -->
 
-	<h1>Hi {{request.user}}  <a href="/logout">Log out</a></h1>
+	<h1>Hi {{request.user}}  <a href="/logout"><i class="fas fa-user"></i></a></h1>
 
 
 	<!-- start banner Area -->

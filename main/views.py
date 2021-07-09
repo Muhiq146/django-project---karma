@@ -81,6 +81,10 @@ def signUp(request):
     return render(request, 'signUp.html')
 
 
+def profile(request):
+    return checkAnonymous(request, 'profile.html')
+
+
 def tracking(request):
     return checkAnonymous(request, 'tracking.html')
 
