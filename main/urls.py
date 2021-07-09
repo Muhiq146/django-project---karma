@@ -17,4 +17,6 @@ urlpatterns = [
     path('tracking/', views.tracking, name='tracking'),
     path('elements/', views.elements, name='elements'),
     path('contact/', views.contact, name='contact'),
+    path('sign-up/', views.signUp, name='sign-up'),
+    path('logout/', views.logout_user, name='logout'),
 ]
